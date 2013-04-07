@@ -8,18 +8,10 @@ index_of_Ruby = string.index("Ruby")
 print "The index of 'Ruby' in the string #{string} is #{index_of_Ruby}"
 
 # Print your name ten times.
-x = 0
-until x == 10
-  print "Jensen ROCKS! \n"
-  x = x + 1
-end
+10.times {|i| puts "Jensen"}
 
 # Print the string "This is sentence number 1." where the number 1 changes from 1 to 10.
-y = 1
-while y < 11
-  print "This is sentence number #{y} \n"
-  y = y + 1
-end
+10.times {|i| puts "This is sentence number #{i + 1}."}
 
 =begin
 Bonus problem: If you’re feeling the need for a little more, write a program 
@@ -32,6 +24,10 @@ rand_num = rand(10)
 print "Guess a random number 0-9."
 user_guess = gets.to_i
 
-puts "Your guess was too high!" if user_guess > rand_num
-puts "Your guess was too high!" if user_guess < rand_num
-puts "Your guess is correct! HELL YEAH." if user_guess == rand_num
+if user_guess < rand_num 
+  puts "Your guess is too low. The number was #{rand_num}"
+elsif user_guess > rand_num
+  puts "Your guess is too high. The number was #{rand_num}"
+else
+  puts "Your guess is correct! The random number is: #{rand_num}"
+end
