@@ -11,7 +11,7 @@ print "The index of 'Ruby' in the string #{string} is #{index_of_Ruby}"
 10.times {|i| puts "Jensen"}
 
 # Print the string "This is sentence number 1." where the number 1 changes from 1 to 10.
-10.times {|i| puts "This is sentence number #{i + 1}."}
+(1..10).each {|i| puts "This is sentence number #{i}."}
 
 =begin
 Bonus problem: If you’re feeling the need for a little more, write a program 
